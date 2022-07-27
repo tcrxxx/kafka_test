@@ -24,3 +24,14 @@ docker-compose up -d
 1) chmod +x offsetexplorer.sh
 
 2) ./offsetexplorer.sh
+
+----------------------------------------------------------------------------------
+
+## Chamadas de teste
+
+```shell
+curl --header "Content-Type: application/json" \
+  --request GET \
+  --data '{"username":"xyz","password":"xyz"}' \
+  http://localhost:8080/kafka/send
+```

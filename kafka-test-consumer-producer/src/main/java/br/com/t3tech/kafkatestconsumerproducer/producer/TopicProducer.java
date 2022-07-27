@@ -21,7 +21,7 @@ public class TopicProducer {
 
     public void send(String message){
 //        log.info("Payload enviado: {}" message);
-    	System.out.printf("Payload enviado: %s",message);
+    	System.out.printf("Payload enviado: %s %n",message);
         kafkaTemplate.send(topicName, message);
     }
 
