@@ -1,5 +1,7 @@
 package br.com.t3tech.kafkatestconsumerproducer.producer;
 
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -22,7 +24,7 @@ public class TopicProducer {
     public void send(String message){
 //        log.info("Payload enviado: {}" message);
     	System.out.printf("Payload enviado: %s %n",message);
-        kafkaTemplate.send(topicName, message);
+        kafkaTemplate.send(topicName, UUID.randomUUID().toString(), message);
     }
 
 }
